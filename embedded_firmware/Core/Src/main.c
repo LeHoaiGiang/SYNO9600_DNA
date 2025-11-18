@@ -614,26 +614,7 @@ int main(void)
 				global_variable.advanced_setting.FillChemistryDone.volumeCap.Byte[1]= Command[46];
 				global_variable.advanced_setting.FillChemistryDone.volumeOx.Byte[0]= Command[47];
 				global_variable.advanced_setting.FillChemistryDone.volumeOx.Byte[1]= Command[48];
-				/*
-				 *
-					Command_send[32] = global_var.advanced_setting.FillChemistryDone.EnableFillWellDone;
-                    Command_send[33] = global_var.advanced_setting.FillChemistryDone.En_WASH;
-                    Command_send[34] = global_var.advanced_setting.FillChemistryDone.En_Deblock;
-                    Command_send[35] = global_var.advanced_setting.FillChemistryDone.En_Coupling;
-                    Command_send[36] = global_var.advanced_setting.FillChemistryDone.En_Deblock;
-                    Command_send[37] = global_var.advanced_setting.FillChemistryDone.En_Coupling;
-                    Command_send[38] = global_var.advanced_setting.FillChemistryDone.typeReagent;
-                    Command_send[39] = global_var.advanced_setting.FillChemistryDone.volumeWASH.Byte[0];
-                    Command_send[40] = global_var.advanced_setting.FillChemistryDone.volumeWASH.Byte[1];
-                    Command_send[41] = global_var.advanced_setting.FillChemistryDone.volumeDeblock.Byte[0];
-                    Command_send[43] = global_var.advanced_setting.FillChemistryDone.volumeDeblock.Byte[1];
-                    Command_send[44] = global_var.advanced_setting.FillChemistryDone.volumeCoupling.Byte[0];
-                    Command_send[45] = global_var.advanced_setting.FillChemistryDone.volumeCoupling.Byte[1];
-                    Command_send[46] = global_var.advanced_setting.FillChemistryDone.volumeCap.Byte[0];
-                    Command_send[47] = global_var.advanced_setting.FillChemistryDone.volumeCap.Byte[1];
-                    Command_send[48] = global_var.advanced_setting.FillChemistryDone.volumeOx.Byte[0];
-                    Command_send[49] = global_var.advanced_setting.FillChemistryDone.volumeOx.Byte[1];
-				 */
+
 				if(global_variable.signal_running.u16_counter_base_finished % 5 == 0 && global_variable.control_air.b_enable_clean_box != true &&
 						global_variable.synthetic_oligo.fill_chemical.u8_first_type_chemical == TCA_in_DCM)
 				{
@@ -2022,6 +2003,7 @@ void START_OLIGO_SYNTHETIC()
 			HAL_GPIO_WritePin(GPIO_Extend[1].Port, GPIO_Extend[1].Pin, RESET);
 		}
 	}// ket thuc bom hoa chat khong phai Coupling
+	FillChemistryWellDone(&global_variable);
 	// ==================== KET THUC CHU TRINH BOM HOA CHAT =======================================================================
 #ifdef SYNO24_PNA
 	global_variable.UART_Command.u8_Data_Tx_Buffer[2] = global_variable.synthetic_oligo.fill_chemical.u16tb_wait_after_fill.Byte[0];

@@ -9,7 +9,7 @@
 #define INC_FUNCTION_H_
 #include "main.h"
 #include "struct.h"
-//========================================== POSITION SYSTEM
+//========================================== POSITION SYSTEM ==========================================================
 
 #define Z_POSITION_NORMAL 330
 #define Z_POSITION_CLEAN_AIR 330
@@ -20,8 +20,6 @@
 #define Y_POSITION_PUSH_DOWN  1190
 #define Z_POSITION_PUSH_DOWN  388
 
-//#define	X_PRIMMING_POS_1			2072
-//#define	X_PRIMMING_POS_2			2072
 #define	X_PRIMMING_POS_1			(uint16_t)(X_POSITION_PUSH_DOWN - 528)
 #define	X_PRIMMING_POS_2			(uint16_t)(X_POSITION_PUSH_DOWN - 528)
 #define	Y_PRIMMING_POS				1200
@@ -107,6 +105,7 @@ int8_t get_x_index_for_valve(uint8_t valve_to_find) ;
 void Calib_process(Global_var_t* p_global_variable);
 void Valve_Set(uint8_t u8_idx_valve);
 void Init_position();
+void FillChemistryWellDone(Global_var_t* p_global_variable);
 void Chemical_fill_process(uint8_t type_sulphite, uint16_t u16_volume, uint8_t u8_pos_X,  uint8_t u8_pos_Y);
 void Valve_EnaAll();
 void Valve_DisAll();
@@ -131,7 +130,7 @@ void process_well_sequences(Global_var_t* p_global_variable,
                             uint16_t default_volume);
 void deactivate_all_valvesAmidite(void);
 void execute_chemical_primming(Global_var_t* p_global_variable);
-//-================================================= update new gianglh22 15-07-2025
+//-================================================= update new gianglh22 15-07-2025 =================================
 uint16_t Valve_CalculateOpenTime(Global_var_t* global, ORDINAL_VALVE type, uint8_t valve_idx, uint16_t volume);
 void open_valves(ORDINAL_VALVE type, bool signal_fill[4], int16_t u16_time_fill[4]);
 void ManualFill_ChemicalGroup4(uint8_t chemicalType, uint16_t volume, uint8_t columnIndex, uint8_t rowIndex, Global_var_t* globalData);
