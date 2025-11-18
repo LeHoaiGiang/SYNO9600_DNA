@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1280</width>
-    <height>896</height>
+    <width>1707</width>
+    <height>1008</height>
    </rect>
   </property>
   <property name="font">
@@ -126,7 +126,7 @@ QTabBar
           <enum>QTabWidget::Rounded</enum>
          </property>
          <property name="currentIndex">
-          <number>4</number>
+          <number>0</number>
          </property>
          <property name="iconSize">
           <size>
@@ -7547,8 +7547,8 @@ QScrollArea{
                         <rect>
                          <x>0</x>
                          <y>0</y>
-                         <width>406</width>
-                         <height>448</height>
+                         <width>618</width>
+                         <height>497</height>
                         </rect>
                        </property>
                        <layout class="QVBoxLayout" name="verticalLayout_50">
@@ -19137,8 +19137,8 @@ color: rgb(0, 0, 0);
                                <rect>
                                 <x>0</x>
                                 <y>0</y>
-                                <width>343</width>
-                                <height>303</height>
+                                <width>465</width>
+                                <height>350</height>
                                </rect>
                               </property>
                               <layout class="QVBoxLayout" name="verticalLayout_79">
@@ -19181,8 +19181,8 @@ QScrollArea{
                                    <rect>
                                     <x>0</x>
                                     <y>0</y>
-                                    <width>308</width>
-                                    <height>331</height>
+                                    <width>509</width>
+                                    <height>431</height>
                                    </rect>
                                   </property>
                                   <layout class="QVBoxLayout" name="verticalLayout_80">
