@@ -2507,7 +2507,6 @@ void Amidite_process(Global_var_t* p_global_variable, uint8_t u8_idx)
 	//		Stepper_AutoHome_SYN024();
 	//		buzzer_blink();
 	//	}
-
 }
 
 /*
@@ -2567,7 +2566,7 @@ void Amidite_process(Global_var_t* p_global_variable, uint8_t u8_idx)
 		} // chay well tren 1 hang
 	}// chay
 }
- */
+*/
 
 /*
  * Le Hoai Giang
@@ -3032,8 +3031,6 @@ void Calib_process(Global_var_t* p_global_variable)
 		break;
 	}
 }
-
-
 
 
 void auto_primming( Global_var_t* p_global_variable, uint16_t volume, VALVE__CHEMICAL start_valve, VALVE__CHEMICAL end_valve)
@@ -3616,11 +3613,9 @@ void process_well_sequences(Global_var_t* p_global_variable,
 		}
 	}
 }
-
-
 //======================================================================================== OPEN VALVE THE HE MOI ===================================================================================
 // ####################################################################################### CAP NHAT 15-07-2025 #####################################################################################
-/**
+/*
  * Author: LeHoaiGiang
  * @brief Mo Valve theo vi tri va signal
  * @param start_valve Van bắt đầu của nhóm cần xử lý.
@@ -3631,7 +3626,6 @@ void open_valves(ORDINAL_VALVE type, bool signal_fill[4], int16_t u16_time_fill[
 {
 	uint8_t num_valves = VALVES_PER_TYPE[type];
 	uint8_t base_index = VALVE_OFFSET_MAP[type];
-
 	for(int i = 0; i < num_valves; i++)
 	{
 		if (base_index + i >= MAX_NUMBER_VALVE)
@@ -3682,12 +3676,9 @@ void ManualFill_ChemicalGroup4(uint8_t chemicalType, uint16_t volume, uint8_t co
 		return;
 
 	if(volume == 0) return;
-
 	int pos_x = Fill_Position_X[chemicalType][columnIndex];
 	int pos_y = Fill_Position_Y[chemicalType][rowIndex];
-
 	Stepper_move_Coordinates_XY(pos_x, pos_y);
-
 	// Tính thời gian cho từng valve theo kiểu đảo ngược (valve 3 -> 2 -> 1 -> 0)
 	for(int i = 0; i < 4; i++)
 	{
@@ -3728,3 +3719,7 @@ uint16_t Valve_CalculateOpenTime(Global_var_t* global, ORDINAL_VALVE type, uint8
 
 	return (uint16_t)(db_time);
 }
+
+
+
+
